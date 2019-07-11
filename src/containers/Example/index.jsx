@@ -1,16 +1,23 @@
 import React from 'react';
-import { Col, Container, Row } from 'reactstrap';
+import {
+  Col, Card, CardBody, Container, Row,
+} from 'reactstrap';
 import ExampleCard from './components/ExampleCard';
+import Calc from './components/Calc';
 
 const ExamplePage = () => (
   <Container className="dashboard">
     <Row>
-      <Col md={12}>
-        <h3 className="page-title">Example Page One</h3>
+      <Col md={6}>
+        <Card>
+          <CardBody>
+            <Calc />
+          </CardBody>
+        </Card>
       </Col>
-    </Row>
-    <Row>
-      <ExampleCard />
+      <Col md={6}>
+        <ExampleCard />
+      </Col>
     </Row>
   </Container>
 );
